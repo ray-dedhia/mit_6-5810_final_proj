@@ -1,13 +1,14 @@
 # Instructions
-
-## Running
-
-### Setup
-- Run `setup.sh`
-
-### Execution
-- Run workload: `runcpu --config=MyConfig --noreportable 500.perlbench_r 520.omnetpp_r 523.xalancbmk_r 531.deepsjeng_r 541.leela_r 548.exchange2_r 557.xz_r 999.specrand_ir`
-
-## Logging
-
-### Snapshotting
+- Setup
+    - `setup.sh`
+- Run instruction set
+    - `runcpu --config=MyConfig --noreportable 500.perlbench_r 520.omnetpp_r 523.xalancbmk_r 531.deepsjeng_r 541.leela_r 548.exchange2_r 557.xz_r 999.specrand_ir`
+- Snapshotting
+    - Take a snapshot of each core
+    - Include memory and registry state
+- Instruction logging
+    - Have each child process dump its memory data
+    - Include /proc/self/map
+    - Focus on program's VMAs (virtual memory areas)
+    - Include information from trapframe (via sending trapped syscall)
+- Comparisons
