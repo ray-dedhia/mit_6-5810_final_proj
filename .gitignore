@@ -1,0 +1,4 @@
+# files to ignore
+specccpu_2017.iso
+.tmux.conf
+.vimrc
