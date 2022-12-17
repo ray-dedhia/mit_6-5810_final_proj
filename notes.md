@@ -2,6 +2,9 @@
 
 ### Links 
 - [Install SPEC-CPU on Linux](https://www.spec.org/cpu2017/Docs/install-guide-unix.html)
+- [SPEC CPU 2017 Overview](https://www.spec.org/cpu2017/Docs/overview.html#Q16)
+- [SPEC CPU 2017 System Requirements](https://www.spec.org/cpu2017/Docs/system-requirements.html#MultipleCPUs)
+- [SPEC CPU 2017 Config Files](https://www.spec.org/cpu2017/Docs/config.html#hw_ncores)
 - [Using the RUNCPU Command](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
     - [Actions](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
 
