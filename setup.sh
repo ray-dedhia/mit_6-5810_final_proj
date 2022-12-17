@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# TODO
-# - copy over files
+# To Do
+# - files to copy over
 #   - specccpu_2017.iso to /local
 #   - .bash_profile, .tmux.conf, and .vimrc to ~/
 #   - MyConfig.cfg to /local/spec/config
-# - backup files when done
+# - files to backup
 #   - /local/spec/config/MyConfig.cfg
 #   - /local/setup.sh
 
