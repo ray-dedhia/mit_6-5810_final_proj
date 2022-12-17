@@ -2,7 +2,7 @@
 - Run `setup.sh`
 - Run workload: `runcpu --config=MyConfig --noreportable 500.perlbench_r 520.omnetpp_r 523.xalancbmk_r 531.deepsjeng_r 541.leela_r 548.exchange2_r 557.xz_r 999.specrand_ir`
 
-## Notes
+## SPEC-CPU Notes
 
 ### Links 
 - [Install SPEC-CPU on Linux](https://www.spec.org/cpu2017/Docs/install-guide-unix.html)
@@ -41,3 +41,9 @@
 - `SPECrate` int benchmarks with peak metrics
     - Command: `runcpu --config=MyConfig --action=build SPECrate2017_int_peak`
     - Benchmarks selected: `500.perlbench_r, 502.gcc_r, 505.mcf_r, 520.omnetpp_r, 523.xalancbmk_r, 525.x264_r, 531.deepsjeng_r, 541.leela_r, 548.exchange2_r, 557.xz_r, 999.specrand_ir`
+
+## CloudLab
+
+### Snapshots
+- [Docs](https://docs.cloudlab.us/cloudlab-manual.html)
+- Directories included in snapshots: `/local`, `/data`, and `/opt`
