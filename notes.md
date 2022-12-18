@@ -7,9 +7,16 @@
 - [SPEC CPU 2017 Config Files](https://www.spec.org/cpu2017/Docs/config.html#hw_ncores)
 - [Using the RUNCPU Command](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
     - [Actions](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
+- [RUNCPU Avoidance](https://www.spec.org/cpu2017/Docs/runcpu-avoidance.html)
 
 ### RUNCPU Command
 - Syntax: `runcpu [options] [list of benchmarks to run]`
+- How it works
+    - Spawns multiple child processes, which run SPEC CPU
+    - PID of child processes change over execution
+- Track PID
+    - `ps -x --forest`
+    - `pgrep -f ^../run_base_refrate`
 
 ### Benchmarks
 
