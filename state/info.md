@@ -1,7 +1,8 @@
 # State 
 - Contains state snapshots after instruction set benchmarks have been run
-    - Benchmarks: SPECrate int benchmarks with base metrics (excluding ones that return errors)
-    - State snapshots: outputs of `/proc/$pid/maps`, `gdb info proc mappings`, and `gdb info registers` after each process called by the benchmark(s) being run has completed
+    - Each benchmark is run as several processes
+        - Using the SPECrate int benchmarks with base metrics (excluding the ones that return errors)
+    - When each process completes, get output of `/proc/$pid/maps` and process it
 - Pairwise core testing
     - $n and $m refer to the two cores
 - Note: the CloudLab machine (`c220g5`) contains 40 cores

@@ -14,8 +14,15 @@ sudo gdb -batch-silent \
     -ex "dir /proj/final-project/glibc-2.31/sysdeps" \
     -ex "catch syscall exit_group" \
     -ex "c" \
-    -ex "info proc mappings" \
-    -ex "info registers" \
-    -ex "shell cat /proc/$pid/maps > /proj/final-project/state/$fn/proc-maps-c$core-p$pid.log" \
+    -ex "shell grep r[-w]-p /proc/$pid/maps \
+         | sed -n 's/^\([0-9a-f]*\)-\([0-9a-f]*\) .*$/\1 \2/p' \
+         | while read start stop; do \
+            gdb --batch --pid $pid -ex \
+            "dump memory /proj/final-project/state/$fn/proc-maps-c$core-p$pid-r$start-$stop.log 0x$start 0x$stop"; done
     -ex "c" \
     -ex "quit"
+
+# extra logging
+# -ex "shell cat /proc/$pid/maps > /proj/final-project/state/$fn/proc-maps-c$core-p$pid.log" \
+# -ex "info proc mappings" \
+# -ex "info registers" \

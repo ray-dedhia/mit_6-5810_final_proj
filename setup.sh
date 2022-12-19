@@ -2,13 +2,11 @@
 
 # Files
 # - copy over
-#   - specccpu_2017.iso, setup.sh, run_gdb.sh, and run_speccpu.sh to /proj/final-project
+#   - specccpu_2017.iso and *.sh to /proj/final-project
 #   - MyConfig.cfg to /proj/final-project/spec/config/
 #   - .tmux.conf and .vimrc to ~/
 # - backup
-#   - /proj/final-project/setup.sh
-#   - /proj/final-project/run_gdb.sh
-#   - /proj/final-project/run_speccpu.sh
+#   - /proj/final-project/*.sh
 #   - /proj/final-project/spec/config/MyConfig.cfg
 
 # install compilers
