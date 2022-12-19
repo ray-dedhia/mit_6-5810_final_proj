@@ -1,0 +1,32 @@
+55d8b9c62000-55d8b9c74000 r--p 00000000 08:01 568486                     /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0014/perlbench_r_base.mytest-m64
+55d8b9c74000-55d8b9e53000 r-xp 00012000 08:01 568486                     /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0014/perlbench_r_base.mytest-m64
+55d8b9e53000-55d8b9ed8000 r--p 001f1000 08:01 568486                     /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0014/perlbench_r_base.mytest-m64
+55d8b9ed8000-55d8b9ede000 r--p 00275000 08:01 568486                     /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0014/perlbench_r_base.mytest-m64
+55d8b9ede000-55d8b9ee0000 rw-p 0027b000 08:01 568486                     /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0014/perlbench_r_base.mytest-m64
+55d8b9ee0000-55d8b9ee2000 rw-p 00000000 00:00 0 
+55d8ba2ff000-55d8c0db3000 rw-p 00000000 00:00 0                          [heap]
+7f7808bc5000-7f7808ff4000 rw-p 00000000 00:00 0 
+7f78096a4000-7f780c110000 rw-p 00000000 00:00 0 
+7f780c18d000-7f780c190000 rw-p 00000000 00:00 0 
+7f780c190000-7f780c1b2000 r--p 00000000 08:01 32875                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f780c1b2000-7f780c32a000 r-xp 00022000 08:01 32875                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f780c32a000-7f780c378000 r--p 0019a000 08:01 32875                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f780c378000-7f780c37c000 r--p 001e7000 08:01 32875                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f780c37c000-7f780c37e000 rw-p 001eb000 08:01 32875                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7f780c37e000-7f780c382000 rw-p 00000000 00:00 0 
+7f780c382000-7f780c38f000 r--p 00000000 08:01 32877                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f780c38f000-7f780c436000 r-xp 0000d000 08:01 32877                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f780c436000-7f780c4cf000 r--p 000b4000 08:01 32877                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f780c4cf000-7f780c4d0000 r--p 0014c000 08:01 32877                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f780c4d0000-7f780c4d1000 rw-p 0014d000 08:01 32877                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7f780c4d9000-7f780c4db000 rw-p 00000000 00:00 0 
+7f780c4db000-7f780c4dc000 r--p 00000000 08:01 32871                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f780c4dc000-7f780c4ff000 r-xp 00001000 08:01 32871                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f780c4ff000-7f780c507000 r--p 00024000 08:01 32871                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f780c508000-7f780c509000 r--p 0002c000 08:01 32871                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f780c509000-7f780c50a000 rw-p 0002d000 08:01 32871                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7f780c50a000-7f780c50b000 rw-p 00000000 00:00 0 
+7fffb2443000-7fffb2464000 rw-p 00000000 00:00 0                          [stack]
+7fffb248e000-7fffb2491000 r--p 00000000 00:00 0                          [vvar]
+7fffb2491000-7fffb2492000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 --xp 00000000 00:00 0                  [vsyscall]

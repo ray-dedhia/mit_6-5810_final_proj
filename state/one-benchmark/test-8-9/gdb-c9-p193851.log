@@ -1,0 +1,73 @@
+Catchpoint 1 (syscall 'exit_group' [231])
+
+Catchpoint 1 (call to syscall exit_group), __GI__exit (status=0) at ../sysdeps/unix/sysv/linux/_exit.c:31
+31	      INLINE_SYSCALL (exit_group, 1, status);
+process 193851
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset objfile
+      0x5624579b2000     0x5624579c4000    0x12000        0x0 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x5624579c4000     0x562457ba3000   0x1df000    0x12000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562457ba3000     0x562457c28000    0x85000   0x1f1000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562457c28000     0x562457c2e000     0x6000   0x275000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562457c2e000     0x562457c30000     0x2000   0x27b000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562457c30000     0x562457c32000     0x2000        0x0 
+      0x562458144000     0x56245ebf8000  0x6ab4000        0x0 [heap]
+      0x7fa2603a0000     0x7fa2607cf000   0x42f000        0x0 
+      0x7fa260e7f000     0x7fa2638eb000  0x2a6c000        0x0 
+      0x7fa263968000     0x7fa26396b000     0x3000        0x0 
+      0x7fa26396b000     0x7fa26398d000    0x22000        0x0 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7fa26398d000     0x7fa263b05000   0x178000    0x22000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7fa263b05000     0x7fa263b53000    0x4e000   0x19a000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7fa263b53000     0x7fa263b57000     0x4000   0x1e7000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7fa263b57000     0x7fa263b59000     0x2000   0x1eb000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7fa263b59000     0x7fa263b5d000     0x4000        0x0 
+      0x7fa263b5d000     0x7fa263b6a000     0xd000        0x0 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7fa263b6a000     0x7fa263c11000    0xa7000     0xd000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7fa263c11000     0x7fa263caa000    0x99000    0xb4000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7fa263caa000     0x7fa263cab000     0x1000   0x14c000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7fa263cab000     0x7fa263cac000     0x1000   0x14d000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7fa263cb4000     0x7fa263cb6000     0x2000        0x0 
+      0x7fa263cb6000     0x7fa263cb7000     0x1000        0x0 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7fa263cb7000     0x7fa263cda000    0x23000     0x1000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7fa263cda000     0x7fa263ce2000     0x8000    0x24000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7fa263ce3000     0x7fa263ce4000     0x1000    0x2c000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7fa263ce4000     0x7fa263ce5000     0x1000    0x2d000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7fa263ce5000     0x7fa263ce6000     0x1000        0x0 
+      0x7ffc84067000     0x7ffc84088000    0x21000        0x0 [stack]
+      0x7ffc840f9000     0x7ffc840fc000     0x3000        0x0 [vvar]
+      0x7ffc840fc000     0x7ffc840fd000     0x1000        0x0 [vdso]
+  0xffffffffff600000 0xffffffffff601000     0x1000        0x0 [vsyscall]
+rax            0xffffffffffffffda  -38
+rbx            0x7fa263b538a0      140335434250400
+rcx            0x7fa263a4e146      140335433179462
+rdx            0x0                 0
+rsi            0x3c                60
+rdi            0x0                 0
+rbp            0x0                 0x0
+rsp            0x7ffc840850d8      0x7ffc840850d8
+r8             0xe7                231
+r9             0xffffffffffffff80  -128
+r10            0x3                 3
+r11            0x246               582
+r12            0x7fa263b538a0      140335434250400
+r13            0x1                 1
+r14            0x7fa263b5c2e8      140335434285800
+r15            0x0                 0
+rip            0x7fa263a4e146      0x7fa263a4e146 <__GI__exit+54>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+k0             0x0                 0
+k1             0x0                 0
+k2             0x0                 0
+k3             0x0                 0
+k4             0x0                 0
+k5             0x0                 0
+k6             0x0                 0
+k7             0x0                 0
+[Inferior 1 (process 193851) exited normally]
