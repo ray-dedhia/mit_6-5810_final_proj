@@ -1,15 +1,15 @@
 #!/bin/sh
 
-# TODO
-# - copy over files
-#   - specccpu_2017.iso, setup.sh, run_gdb.sh, and run_speccpu.sh to /local/
-#   - MyConfig.cfg to /local/spec/config/
+# Files
+# - copy over
+#   - specccpu_2017.iso, setup.sh, run_gdb.sh, and run_speccpu.sh to /proj/final-project
+#   - MyConfig.cfg to /proj/final-project/spec/config/
 #   - .tmux.conf and .vimrc to ~/
-# - backup files when done
-#   - /local/setup.sh
-#   - /local/run_gdb.sh
-#   - /local/run_speccpu.sh
-#   - /local/spec/config/MyConfig.cfg
+# - backup
+#   - /proj/final-project/setup.sh
+#   - /proj/final-project/run_gdb.sh
+#   - /proj/final-project/run_speccpu.sh
+#   - /proj/final-project/spec/config/MyConfig.cfg
 
 # install compilers
 sudo apt update
@@ -20,24 +20,20 @@ sudo apt install golang-go
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.copy
 sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 sudo apt update
-cd /local
+cd /proj/final-project
 sudo apt source libc6
 
 # install other packages
 sudo apt install htop
 
 # mount spec cpu iso image
-cd /local
+cd /proj/final-project
 mkdir mnt
-sudo mount -t iso9660 -o ro,exec,loop /local/specccpu_2017.iso /local/mnt
+sudo mount -t iso9660 -o ro,exec,loop /proj/final-project/specccpu_2017.iso /proj/final-project/mnt
 
 # install image
+cd /proj/final-project
 mkdir spec
-SPEC='/local/spec'
+SPEC='/proj/final-project/spec'
 cd mnt
-./install.sh
-
-# gdb setup
-# fix https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg5895343.html
-sudo mkdir /usr/lib/debug/lib64
-sudo ln -s /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so /usr/lib/debug/lib64
+./install.sh -d $SPEC
