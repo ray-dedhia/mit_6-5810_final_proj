@@ -1,8 +1,11 @@
 #!/bin/bash
 
 fn=$1
+echo "fn=$1"
 core=$2
+echo "core=$2"
 pid=$3
+echo "pid=$3"
 
 sudo gdb -batch-silent \
     -p $pid \
@@ -13,6 +16,6 @@ sudo gdb -batch-silent \
     -ex "c" \
     -ex "info proc mappings" \
     -ex "info registers" \
-    -ex "shell cat /proc/$pid/maps > /proj/final-project/state/core$core/proc-maps-c$core-p$pid.log" \
+    -ex "shell cat /proc/$pid/maps > /proj/final-project/state/$fn/proc-maps-c$core-p$pid.log" \
     -ex "c" \
     -ex "quit"

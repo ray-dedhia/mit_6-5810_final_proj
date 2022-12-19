@@ -1,26 +1,19 @@
-# Instructions
+# Files
 
-## Main
-- Setup
-    - `setup.sh`
-- Run instruction set
-    - `taskset --cpu-list 0 runcpu --config=MyConfig --noreportable 500.perlbench_r 520.omnetpp_r 523.xalancbmk_r 531.deepsjeng_r 541.leela_r 548.exchange2_r 557.xz_r 999.specrand_ir`
-    - Use `taskset` to limit which CPU cores are being used
-    - Running SPECrate int benchmarks with base metrics (excluding ones that return errors)
-- State
-    - Attach gdb to command: `sudo gdb -p "$(pgrep -f ^../run_base_refrate)"`
-    - Add source directory: `dir /local/glibc-2.31/sysdeps`
-    - Create catchpoint at exit_group syscall: `catch syscall exit_group`
-    - Get state info:
-        - `info proc mappings`
-        - `info registers`
-    - Get `/proc/$pid/maps`:
-        - `shell`
-        - `cat /proc/$pid/maps`
-        - `exit`
-    - Exit and attach gdb to next command
+## Code
+```
+> setup.sh
+> do_testing.sh
+|   > calls run_test.sh
+|   |   > calls `runcpu` commands
+|   > calls run_log.sh
+|   |   > calls run_gdb.sh
+|   |   |   > gets `/proc/$pid/maps`, `gdb info proc mappings`,
+|   |   |   | and `gdb info registers` data after each process
+|   |   |   | called by the benchmark(s) being run has completed
+> MyConfig.cfg
+|   > configurations for runcpu commands
+```
 
-## MyConfig.cfg
-- `cat /proc/cpuinfo`
-- `lscpu`
-- `lsb_release -a`
+## State
+See state folder for state snapshot data.
