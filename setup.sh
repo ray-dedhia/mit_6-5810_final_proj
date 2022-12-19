@@ -10,19 +10,19 @@
 #   - /proj/final-project/spec/config/MyConfig.cfg
 
 # install compilers
-sudo apt update
-sudo apt install gfortran
-sudo apt install golang-go
+sudo apt update -y
+sudo apt install gfortran -y
+sudo apt install golang-go -y
 
 # install libc6
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.copy
 sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
-sudo apt update
+sudo apt update -y
 cd /proj/final-project
 sudo apt source libc6
 
 # install other packages
-sudo apt install htop
+sudo apt install htop -y
 
 # mount spec cpu iso image
 cd /proj/final-project
