@@ -8,11 +8,8 @@
     - Use `taskset` to limit which CPU cores are being used
     - Running SPECrate int benchmarks with base metrics (excluding ones that return errors)
 - State
-    - Get PID
-        - `ps -x --forest`
-        - `pgrep -f ^../run_base_refrate`
-    - Attach gdb to command: `sudo gdb -p $pid`
-    - Add source directory: `dir /local/spec/glibc-2.31/sysdeps`
+    - Attach gdb to command: `sudo gdb -p "$(pgrep -f ^../run_base_refrate)"`
+    - Add source directory: `dir /local/glibc-2.31/sysdeps`
     - Create catchpoint at exit_group syscall: `catch syscall exit_group`
     - Get state info:
         - `info proc mappings`
