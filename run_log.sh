@@ -24,6 +24,10 @@ do
     set -- $pids
     pid1=$1
     pid2=$2
+    if [ "$pid2" = "" ]
+    then
+        continue
+    fi
     echo "pid1 = $pid1"
     echo "pid2 = $pid2"
 
