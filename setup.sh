@@ -9,12 +9,13 @@
 #   - /local/spec/config/MyConfig.cfg
 #   - /local/setup.sh
 
-# install fortran compiler
+# install compilers
 sudo apt update
 sudo apt install gfortran
-
-# install go compiler
 sudo apt install golang-go
+
+# install other packages
+sudo apt install htop
 
 # mount spec cpu iso image
 cd /local

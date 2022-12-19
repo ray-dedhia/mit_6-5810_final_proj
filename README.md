@@ -1,4 +1,6 @@
 # Instructions
+
+## Main
 - Setup
     - `setup.sh`
 - Run instruction set
@@ -16,3 +18,8 @@
         - `cat /proc/$pid/maps`
         - `exit`
     - Exit and attach gdb to next command
+
+## MyConfig.cfg
+- `cat /proc/cpuinfo`
+- `lscpu`
+- `lsb_release -a`
