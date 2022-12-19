@@ -14,6 +14,14 @@ sudo apt update
 sudo apt install gfortran
 sudo apt install golang-go
 
+# install libc6
+sudo apt install libc6-dbg
+sudo apt install dpkg-dev
+sudo cp /etc/apt/sources.list /etc/apt/sources.list.copy
+sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
+sudo apt update
+sudo apt source libc6
+
 # install other packages
 sudo apt install htop
 
