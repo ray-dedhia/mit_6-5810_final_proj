@@ -1,11 +1,11 @@
 #!/bin/sh
 
-# To Do
-# - files to copy over
+# TODO
+# - copy over files
 #   - specccpu_2017.iso to /local
 #   - .bash_profile, .tmux.conf, and .vimrc to ~/
 #   - MyConfig.cfg to /local/spec/config
-# - files to backup
+# - backup files when done
 #   - /local/spec/config/MyConfig.cfg
 #   - /local/setup.sh
 
@@ -30,3 +30,8 @@ cd mnt
 # set paths
 cd /local/spec
 source shrc
+
+# gdb setup
+# fix https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg5895343.html
+sudo mkdir /usr/lib/debug/lib64
+sudo ln -s /usr/lib/debug/lib/x86_64-linux-gnu/ld-2.31.so /usr/lib/debug/lib64

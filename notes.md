@@ -1,6 +1,8 @@
 ## SPEC-CPU Notes
 
 ### Links 
+
+#### SPEC CPU
 - [Install SPEC-CPU on Linux](https://www.spec.org/cpu2017/Docs/install-guide-unix.html)
 - [SPEC CPU 2017 Overview](https://www.spec.org/cpu2017/Docs/overview.html#Q16)
 - [SPEC CPU 2017 System Requirements](https://www.spec.org/cpu2017/Docs/system-requirements.html#MultipleCPUs)
@@ -8,6 +10,9 @@
 - [Using the RUNCPU Command](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
     - [Actions](https://www.spec.org/cpu2017/Docs/runcpu.html#action)
 - [RUNCPU Avoidance](https://www.spec.org/cpu2017/Docs/runcpu-avoidance.html)
+
+#### Other
+- [`/proc/$pid/maps`](https://stackoverflow.com/questions/1401359/understanding-linux-proc-pid-maps-or-proc-self-maps)
 
 ### RUNCPU Command
 - Syntax: `runcpu [options] [list of benchmarks to run]`
