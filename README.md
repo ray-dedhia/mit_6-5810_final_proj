@@ -6,5 +6,13 @@
     - Use `taskset` to limit which CPU cores are being used
     - Running SPECrate int benchmarks with base metrics (excluding ones that return errors)
 - State
-    - Process information stored in /proc/<pid>/maps
-    - Get process <pid> from `top` command
+    - Attach gdb to command: `sudo gdb -p <pid>`
+    - Create catchpoint at exit_group syscall: `catch syscall exit_group`
+    - Get state info:
+        - `info proc mappings`
+        - `info registers`
+    - Get `/proc/$pid/maps`:
+        - `shell`
+        - `cat /proc/$pid/maps`
+        - `exit`
+    - Exit and attach gdb to next command
