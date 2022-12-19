@@ -2,7 +2,7 @@
 
 # TODO
 # - copy over files
-#   - specccpu_2017.iso to /local
+#   - specccpu_2017.iso and setup.sh to /local
 #   - .bash_profile, .tmux.conf, and .vimrc to ~/
 #   - MyConfig.cfg to /local/spec/config
 # - backup files when done
@@ -26,10 +26,6 @@ mkdir spec
 SPEC='/local/spec'
 cd mnt
 ./install.sh
-
-# set paths
-cd /local/spec
-source shrc
 
 # gdb setup
 # fix https://www.mail-archive.com/ubuntu-bugs@lists.ubuntu.com/msg5895343.html
