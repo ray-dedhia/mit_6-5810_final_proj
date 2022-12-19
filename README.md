@@ -8,7 +8,9 @@
     - Use `taskset` to limit which CPU cores are being used
     - Running SPECrate int benchmarks with base metrics (excluding ones that return errors)
 - State
-    - Use `ps -x --forest` to get `pid`
+    - Get PID
+        - `ps -x --forest`
+        - `pgrep -f ^../run_base_refrate`
     - Attach gdb to command: `sudo gdb -p $pid`
     - Create catchpoint at exit_group syscall: `catch syscall exit_group`
     - Get state info:

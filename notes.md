@@ -19,9 +19,6 @@
 - How it works
     - Spawns multiple child processes, which run SPEC CPU
     - PID of child processes change over execution
-- Track PID
-    - `ps -x --forest`
-    - `pgrep -f ^../run_base_refrate`
 
 ### Benchmarks
 
