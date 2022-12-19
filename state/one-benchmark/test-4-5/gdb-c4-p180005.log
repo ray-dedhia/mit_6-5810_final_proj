@@ -1,0 +1,80 @@
+Catchpoint 1 (syscall 'exit_group' [231])
+Catchpoint 1 (syscall 'exit_group' [252])
+The program is not being run.
+No current process: you must name one.
+The program has no registers now.
+The program is not being run.
+
+Catchpoint 1 (call to syscall exit_group), __GI__exit (status=0) at ../sysdeps/unix/sysv/linux/_exit.c:31
+31	      INLINE_SYSCALL (exit_group, 1, status);
+process 180005
+Mapped address spaces:
+
+          Start Addr           End Addr       Size     Offset objfile
+      0x562400ff7000     0x562401009000    0x12000        0x0 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562401009000     0x5624011e8000   0x1df000    0x12000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x5624011e8000     0x56240126d000    0x85000   0x1f1000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x56240126d000     0x562401273000     0x6000   0x275000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562401273000     0x562401275000     0x2000   0x27b000 /proj/final-project/spec/benchspec/CPU/500.perlbench_r/run/run_base_refrate_mytest-m64.0013/perlbench_r_base.mytest-m64
+      0x562401275000     0x562401277000     0x2000        0x0 
+      0x56240228d000     0x56240e71c000  0xc48f000        0x0 [heap]
+      0x7f1591d35000     0x7f1591e9d000   0x168000        0x0 
+      0x7f1591e9e000     0x7f1591f21000    0x83000        0x0 
+      0x7f1591f3d000     0x7f1591f79000    0x3c000        0x0 
+      0x7f1591f79000     0x7f1591fbd000    0x44000        0x0 
+      0x7f1591ff6000     0x7f1591ff9000     0x3000        0x0 
+      0x7f1591ff9000     0x7f159201b000    0x22000        0x0 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7f159201b000     0x7f1592193000   0x178000    0x22000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7f1592193000     0x7f15921e1000    0x4e000   0x19a000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7f15921e1000     0x7f15921e5000     0x4000   0x1e7000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7f15921e5000     0x7f15921e7000     0x2000   0x1eb000 /usr/lib/x86_64-linux-gnu/libc-2.31.so
+      0x7f15921e7000     0x7f15921eb000     0x4000        0x0 
+      0x7f15921eb000     0x7f15921f8000     0xd000        0x0 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7f15921f8000     0x7f159229f000    0xa7000     0xd000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7f159229f000     0x7f1592338000    0x99000    0xb4000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7f1592338000     0x7f1592339000     0x1000   0x14c000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7f1592339000     0x7f159233a000     0x1000   0x14d000 /usr/lib/x86_64-linux-gnu/libm-2.31.so
+      0x7f1592342000     0x7f1592344000     0x2000        0x0 
+      0x7f1592344000     0x7f1592345000     0x1000        0x0 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7f1592345000     0x7f1592368000    0x23000     0x1000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7f1592368000     0x7f1592370000     0x8000    0x24000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7f1592371000     0x7f1592372000     0x1000    0x2c000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7f1592372000     0x7f1592373000     0x1000    0x2d000 /usr/lib/x86_64-linux-gnu/ld-2.31.so
+      0x7f1592373000     0x7f1592374000     0x1000        0x0 
+      0x7ffdcffe4000     0x7ffdd0005000    0x21000        0x0 [stack]
+      0x7ffdd00f2000     0x7ffdd00f5000     0x3000        0x0 [vvar]
+      0x7ffdd00f5000     0x7ffdd00f6000     0x1000        0x0 [vdso]
+  0xffffffffff600000 0xffffffffff601000     0x1000        0x0 [vsyscall]
+rax            0xffffffffffffffda  -38
+rbx            0x7f15921e18a0      139730622486688
+rcx            0x7f15920dc146      139730621415750
+rdx            0x0                 0
+rsi            0x3c                60
+rdi            0x0                 0
+rbp            0x0                 0x0
+rsp            0x7ffdd0003008      0x7ffdd0003008
+r8             0xe7                231
+r9             0xffffffffffffff80  -128
+r10            0x3                 3
+r11            0x246               582
+r12            0x7f15921e18a0      139730622486688
+r13            0x1                 1
+r14            0x7f15921ea2e8      139730622522088
+r15            0x0                 0
+rip            0x7f15920dc146      0x7f15920dc146 <__GI__exit+54>
+eflags         0x246               [ PF ZF IF ]
+cs             0x33                51
+ss             0x2b                43
+ds             0x0                 0
+es             0x0                 0
+fs             0x0                 0
+gs             0x0                 0
+k0             0x0                 0
+k1             0x0                 0
+k2             0x0                 0
+k3             0x0                 0
+k4             0x0                 0
+k5             0x0                 0
+k6             0x0                 0
+k7             0x0                 0
+[Inferior 1 (process 180005) exited normally]
