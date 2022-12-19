@@ -2,12 +2,14 @@
 
 # TODO
 # - copy over files
-#   - specccpu_2017.iso and setup.sh to /local
-#   - .bash_profile, .tmux.conf, and .vimrc to ~/
-#   - MyConfig.cfg to /local/spec/config
+#   - specccpu_2017.iso, setup.sh, run_gdb.sh, and run_speccpu.sh to /local/
+#   - MyConfig.cfg to /local/spec/config/
+#   - .tmux.conf and .vimrc to ~/
 # - backup files when done
-#   - /local/spec/config/MyConfig.cfg
 #   - /local/setup.sh
+#   - /local/run_gdb.sh
+#   - /local/run_speccpu.sh
+#   - /local/spec/config/MyConfig.cfg
 
 # install compilers
 sudo apt update
