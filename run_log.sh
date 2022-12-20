@@ -1,6 +1,5 @@
 #!/bin/bash
 
-fn=$1
 mainpid="$(pgrep -f '/bin/bash ./run_test.sh')"
 echo "mainpid=$mainpid"
 
@@ -24,7 +23,6 @@ do
     then
         continue
     fi
-    echo "child pids=$pids"
     set -- $pids
     pid1=$1
     pid2=$2
@@ -32,8 +30,6 @@ do
     then
         continue
     fi
-    echo "pid1 = $pid1"
-    echo "pid2 = $pid2"
 
     # get core; stop if core not found
     core1="$(ps -o psr -p $pid1 | tail -1)"
@@ -42,12 +38,23 @@ do
     then
         continue
     fi
-    echo "core1 = $core1"
-    echo "core2 = $core2"
-    echo $fn
+
+    # store gdb variables
+    cd /proj/final-project/state/vars/
+    mkdir p$pid1
+    echo $core1 > /proj/final-project/state/vars/p$pid1/core
+    mkdir p$pid2
+    echo $core2 > /proj/final-project/state/vars/p$pid2/core
+
+    # create directories for state logging
+    cd /proj/final-project/state
+    sdir1="c${core1// /}-p$pid1"
+    mkdir $sdir1
+    sdir2="c${core2// /}-p$pid2"
+    mkdir $sdir2
 
     # do state logging
-    bash run_gdb.sh $fn $core1 $pid1 & bash run_gdb.sh $fn $core2 $pid2
+    sudo gdb -batch-silent -p $pid1 -x /proj/final-project/log_spec_pid_maps.gdb & sudo gdb -batch-silent -p $pid2 -x /proj/final-project/log_spec_pid_maps.gdb
 done
 
 echo "Done"
