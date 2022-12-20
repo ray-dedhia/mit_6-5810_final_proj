@@ -41,17 +41,17 @@ do
 
     # store gdb variables
     cd /proj/final-project/state/vars/
-    mkdir p$pid1
+    mkdir -p p$pid1
     echo $core1 > /proj/final-project/state/vars/p$pid1/core
-    mkdir p$pid2
+    mkdir -p p$pid2
     echo $core2 > /proj/final-project/state/vars/p$pid2/core
 
     # create directories for state logging
     cd /proj/final-project/state
     sdir1="c${core1// /}-p$pid1"
-    mkdir $sdir1
+    mkdir -p $sdir1
     sdir2="c${core2// /}-p$pid2"
-    mkdir $sdir2
+    mkdir -p $sdir2
 
     # do state logging
     sudo gdb -batch-silent -p $pid1 -x /proj/final-project/log_spec_pid_maps.gdb & sudo gdb -batch-silent -p $pid2 -x /proj/final-project/log_spec_pid_maps.gdb

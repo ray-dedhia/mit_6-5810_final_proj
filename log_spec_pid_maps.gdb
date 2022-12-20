@@ -18,9 +18,11 @@ python nl = str(len(open("tmpfile").readlines())); gdb.execute("set $flen = " + 
 
 # dump memory
 set $ln=0
-while ($line < $flen)
-    python fline=open("tmpfile").readline().rstrip().split(); gdb.execute("set $start = " + fline[0]); gdb.execute("set $stop = " + fline[1])
-    dump memory proc-maps-r$start-$stop.log 0x$start 0x$stop
+while ($ln < $flen)
+    python fline=open("tmpfile").readline().rstrip().split(); gdb.execute("set $start_hex = \"" + fline[0] + "\""); gdb.execute("set $stop_hex = \"" + fline[1] + "\"")
+    eval "set $start_num=0x%s", $start_hex
+    eval "set $stop_num=0x%s", $stop_hex
+    eval "dump memory proc-maps-r%s-%s.log %ld %ld", $start_hex, $stop_hex, $start_num, $stop_num
     set $ln=$ln+1
 end
 
