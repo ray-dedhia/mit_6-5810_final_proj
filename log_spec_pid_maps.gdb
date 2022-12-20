@@ -10,7 +10,7 @@ catch syscall exit_group
 c
 
 # get /proc/$pid/maps
-eval "set $f2 = \"/proj/final-project/state/c%d-p%d\"", $core, $pid
+eval "set $f2 = \"/proj/final-project/state/c%d/p%d\"", $core, $pid
 eval "cd %s", $f2
 eval "set $f3 = \"/proc/%d/maps\"", $pid
 eval "shell grep r[-w]-p /proc/%d/maps | awk '{print $1;}' | tr - ' ' > tmpfile", $pid
@@ -31,7 +31,7 @@ c
 quit
 
 # extra logging
-# set logging file /proj/final-project/state/gdb-c$core-p$pid.log
+# set logging file /proj/final-project/state/gdb-c$core/p$pid.log
 # set logging on
 # info proc mappings
 # info registers

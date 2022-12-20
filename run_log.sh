@@ -48,9 +48,9 @@ do
 
     # create directories for state logging
     cd /proj/final-project/state
-    sdir1="c${core1// /}-p$pid1"
+    sdir1="c${core1// /}/p$pid1"
     mkdir -p $sdir1
-    sdir2="c${core2// /}-p$pid2"
+    sdir2="c${core2// /}/p$pid2"
     mkdir -p $sdir2
 
     # do state logging
