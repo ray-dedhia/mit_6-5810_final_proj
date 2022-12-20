@@ -7,8 +7,7 @@
 |   > calls run_test.sh
 |   |   > calls `runcpu` commands
 |   > calls run_log.sh
-|   |   > calls run_gdb.sh
-|   |   |   > gets `/proc/$pid/maps` and processes it
+|   |   > proesses `/proc/$pid/maps` and gets memory dumps
 > MyConfig.cfg
 |   > configurations for runcpu commands
 ```
